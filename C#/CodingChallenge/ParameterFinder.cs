@@ -7,7 +7,7 @@ namespace CodingChallenge
 {
     public class ParameterFinder
     {
-        public string GetParameters(string input, bool alphabetical = false)
+        public string GetParameters(string input)
         {
             var entries = new List<string>();
             int currentLevel = 0;
@@ -65,11 +65,6 @@ namespace CodingChallenge
             if (currentLevel != 0)
             {
                 throw new MismatchedParenthesisException(input);
-            }
-
-            if (alphabetical)
-            {
-                entries.Sort();
             }
 
             return string.Join(Environment.NewLine, entries);

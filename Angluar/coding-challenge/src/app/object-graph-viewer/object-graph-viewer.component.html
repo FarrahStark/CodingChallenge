@@ -1,3 +1,19 @@
-<p>
-  object-graph-viewer works!
-</p>
+<label>Object Definition</label>
+<input [value]="input" (input)="onInputChange($event.target.value)"/>
+<label>Presets</label>
+<select (change)="onInputChange($event.target.value)">
+  <option *ngFor="let preset of presets">{{preset}}</option>
+</select>
+<p class="error">{{errorText}}</p>
+<label>Object Visualization</label>
+<ul>
+  <ng-template #recursiveList let-list>
+    <li *ngFor="let item of list" [ngClass]="{ blank:item.children.length < 1 }">
+      {{item.label}}
+      <ul *ngIf="item.children.length > 0">
+        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
+      </ul>
+    </li>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: graph }"></ng-container>
+</ul>

@@ -1,0 +1,46 @@
+.layout {
+  position: relative;
+  height: 100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.content {
+  background: white;
+  box-shadow: 0 0.5em 2em black;
+}
+
+.header {
+  margin: 0;
+  padding: 0.5em;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,3a3a3a+80,444444+91,545454+99 */
+  background: #4c4c4c; /* Old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #3a3a3a 80%, #444444 91%, #545454 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4c4c4c 0%,#3a3a3a 80%,#444444 91%,#545454 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4c4c4c 0%,#3a3a3a 80%,#444444 91%,#545454 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#545454',GradientType=0 ); /* IE6-9 */
+  color: white;
+  font-weight: bold;
+}
+
+.body {
+  padding: 1em;
+}
+
+@media screen and (min-aspect-ratio: 4/3)
+{
+  .content{
+    max-width: 55%;
+  }
+}
+
+@media screen and (max-aspect-ratio: 4/3)
+{
+  .content{
+    max-width: calc(100% - 4em);
+  }
+}

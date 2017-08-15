@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+body
+{
+  position:absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background: url('assets/background.png');
+}
+
+html
+{
+  font-family: Helvetica, sans-serif;
+}
+
+a.weak {
+  transition: all 300ms ease-in;
+  color: #5c7fff;
+}
+
+a.weak:hover {
+  color: limegreen;
+}
+
+a.weak:visited {
+  color: darkgreen;
+}

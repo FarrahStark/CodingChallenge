@@ -1,0 +1,35 @@
+ul {
+  margin: 0.75em 0;
+  padding: 0 1em;
+  list-style: none;
+}
+li:before {
+  content: "\25bc";/*down arrow*/
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.1em;
+  position: relative;
+}
+li.blank:before {
+  content: "\25b7";/*white right-pointing arrow*/
+  left: -0.9em;
+  top: -0.1em;
+}
+li ul {
+  margin: 0.2em 0 0 0;
+}
+.error {
+  font-weight: bold;
+  color: red;
+}
+
+label {
+  margin-top: 1em;
+  display: block;
+  font-weight: bold;
+}
+input {
+  width: 100%;
+}

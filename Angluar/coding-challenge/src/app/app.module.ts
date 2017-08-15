@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ObjectGraphViewerComponent } from './object-graph-viewer/object-graph-viewer.component';
+import {ObjectGraphParserService} from "./object-graph-parser.service";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,9 @@ import { ObjectGraphViewerComponent } from './object-graph-viewer/object-graph-v
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ObjectGraphParserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

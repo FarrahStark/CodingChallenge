@@ -33,8 +33,10 @@ export class ObjectGraphParserService {
         return null;
       }
 
-      let attribute = <IAttribute>{};
-      attribute.label = attributeName.trim();
+      let attribute = <IAttribute>{
+        label: attributeName.trim(),
+        children: []
+      };
       current.children.push(attribute);
       attributeName = ''
       return attribute;
@@ -48,7 +50,6 @@ export class ObjectGraphParserService {
           throw this.MismatchedParenthesisMessage;
         }
 
-        attribute.children = [];
         stack.push(current);
         current = attribute;
       }

@@ -3,7 +3,7 @@ I did the challenge twice in order to demonstrate my skills in C#/.NET and on fr
 The two sub folders in the repository are completely separate and have nothing to do with each other. They
 are only in the same repository for the sake of convenience.
 
-## Gettin the C# project up an running
+## Getting the C# project up an running
 You will need visual studio 2017 to build the C# project.
 If you want to also run unit tests you will need to install a test runner extension installed that is
 capable of running xunit tests such as jetbrains resharper/dotcover or the xunit console runner.

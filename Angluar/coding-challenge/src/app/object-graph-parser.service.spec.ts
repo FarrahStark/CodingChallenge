@@ -66,21 +66,21 @@ describe('ObjectGraphParserService', () => {
       let input = '(id,created,employee(id,firstname,employeeType(id), lastname),location)';
       let expected = <Array<IAttribute>>
         [
-          {label:'id'},
-          {label:'created'},
+          {label:'id', children: []},
+          {label:'created', children: []},
           {label:'employee',
             children: [
-              {label:'id'},
-              {label:'firstname'},
+              {label:'id', children: []},
+              {label:'firstname', children: []},
               {label:'employeeType',
                 children: [
-                  {label:'id'}
+                  {label:'id', children: []}
                 ]
               },
-              {label:'lastname'},
+              {label:'lastname', children: []},
             ]
           },
-          {label:'location'}
+          {label:'location', children: []}
         ];
       //Act
       let actual = service.parse(input);

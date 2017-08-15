@@ -67,11 +67,8 @@ export class ObjectGraphParserService {
       else {
         attributeName += input[i];
       }
-
-      console.log("column " + i + " value: " + input[i] + " build: " + JSON.stringify(root.children));
     }
     flushAttribute();
-    console.log("final: " + JSON.stringify(root.children));
 
     if (stack.length != 0) {
       throw this.MismatchedParenthesisMessage;
